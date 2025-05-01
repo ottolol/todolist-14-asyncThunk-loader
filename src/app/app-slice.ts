@@ -1,9 +1,11 @@
+import { RequestStatus } from "@/common/types"
 import { createSlice } from "@reduxjs/toolkit"
 
 export const appSlice = createSlice({
   name: "app",
   initialState: {
     themeMode: "light" as ThemeMode,
+    status: "idle" as RequestStatus,
   },
   selectors: {
     selectThemeMode: (state) => state.themeMode,
